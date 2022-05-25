@@ -7,7 +7,9 @@ const Footer = () => {
         <footer className="w-full py-16 bg-base-100 border-t border-blue-200 hover:bg-base-200">
             <div className="md:px-12 lg:px-28">
                 <div className="container m-auto space-y-6 text-gray-600">
-                    {/*logo className="w-40 m-auto"*/}
+                    <div className={'flex justify-center items-center'}>
+                        <button className={'font-bold text-[22px] text-blue-500'}><Link to={'/'}>ChemistPerfume</Link></button>
+                    </div>
                     <ul role="list"
                         className="py-4 flex-col flex gap-4 items-center justify-center sm:flex-row sm:gap-8">
                         <li role="listitem"><a href="#" className="hover:text-cyan-500">Home</a></li>

@@ -1,9 +1,13 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import auth from "../../../firebase.init";
+import {signOut} from 'firebase/auth'
+import {useAuthState} from "react-firebase-hooks/auth";
 
 const Navbar = () => {
+    const [user, loading, error] = useAuthState(auth);
     return (
-        <div className="navbar bg-base-100 border-b border-blue-200 hover:bg-base-200">
+        <div className={'navbar bg-base-100 border-b border-blue-300 hover:bg-base-200'}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -32,7 +36,7 @@ const Navbar = () => {
                         <li><a>Item 3</a></li>
                     </ul>
                 </div>
-                <Link to={'/'} className="btn btn-ghost normal-case text-xl">Home</Link>
+                <Link to={'/'} className="btn btn-ghost normal-case text-xl">ChemistPerfume</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
@@ -46,17 +50,19 @@ const Navbar = () => {
                                 <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/>
                             </svg>
                         </a>
-                        <ul className="p-3.5 bg-blue-200 text-black">
-                            <li className={'hover:bg-gray-300'}><a>Submenu 1</a></li>
-                            <li className={'hover:bg-gray-300'}><a>Submenu 2</a></li>
-                            <li className={'hover:bg-gray-300'}><a>Submenu 3</a></li>
-                            <li className={'hover:bg-red-300'}><button className={'text-red-500 hover:text-black'}>Log Out</button></li>
+                        <ul className="p-3.5 bg-sky-100 text-black">
+                            <li className={'hover:bg-pink-200'}><a>Submenu 1</a></li>
+                            <li className={'hover:bg-pink-200'}><a>Submenu 2</a></li>
+                            <li className={'hover:bg-pink-200'}><a>Submenu 3</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to={'/login'} className="btn">Get started</Link>
+                {
+                    user ? <button onClick={() => signOut(auth)} className="btn">Log Out</button>
+                        : <Link to={'/login'} className="btn">Get started</Link>
+                }
             </div>
         </div>
     );

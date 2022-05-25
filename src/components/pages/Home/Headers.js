@@ -8,9 +8,9 @@ const Headers = () => {
                 <div className="w-full lg:w-1/2">
                     <div className="lg:maxWLg">
                         <h1 className="text-2xl font-medium trackingWide text-gray-800 dark:textWhite lg:text-4xl">Find
-                            your premium new glasses exported from US</h1>
-                        <p className="mt-2 text-gray-600 dark:text-gray-300">We work with the best remunated glasses
-                            dealers in US to find your new glasses.</p>
+                            Your Premium Perfumes.</h1>
+                        <p className="mt-2 text-gray-600 dark:text-gray-300">We work with the best remunated perfume
+                            brands from around the world.</p>
                         <div className="grid gap-6 mt-8 sm:grid-cols-2">
                             <div className="flex items-center text-gray-800 -px-3 dark:text-gray-200">
                                 <svg className="w-5 h-5 mx-3" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -49,7 +49,7 @@ const Headers = () => {
                                           d="M5 13l4 4L19 7"/>
                                 </svg>
 
-                                <span className="mx-3">From US glasses dealers</span>
+                                <span className="mx-3">From World class Brands</span>
                             </div>
 
                             <div className="flex items-center text-gray-800 -px-3 dark:text-gray-200">
@@ -77,7 +77,7 @@ const Headers = () => {
 
                 <div className="flex items-center justify-center w-full h-96 lg:w-1/2">
                     <img className="object-cover w-full h-full maxW-2xl rounded-md"
-                         src="https://images.unsplash.com/photo-1555181126-cf46a03827c0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                         src="https://images.unsplash.com/photo-1557827983-012eb6ea8dc1?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876"
                          alt="glasses photo"/>
                 </div>
             </div>
