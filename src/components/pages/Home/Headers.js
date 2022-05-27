@@ -7,8 +7,7 @@ const Headers = () => {
                 className="container flex flex-col py-10 px-auto space-y-6 mx-auto lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
                 <div className="w-full lg:w-1/2">
                     <div className="lg:maxWLg">
-                        <h1 className="text-2xl font-medium trackingWide text-gray-800 dark:textWhite lg:text-4xl">Find
-                            Your Premium Perfumes.</h1>
+                        <h1 className="text-2xl font-medium trackingWide text-gray-800 dark:textWhite lg:text-4xl">{/*Find Your*/} Premium Perfumes Warehouse.</h1>
                         <p className="mt-2 text-gray-600 dark:text-gray-300">We work with the best remunated perfume
                             brands from around the world.</p>
                         <div className="grid gap-6 mt-8 sm:grid-cols-2">

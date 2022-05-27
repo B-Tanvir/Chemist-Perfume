@@ -1,12 +1,12 @@
 import React from 'react';
 import Headers from "./Headers";
-import Products from "./Products";
+import Inventory from "./Inventory";
 
 const Home = () => {
     return (
         <div>
             <Headers></Headers>
-            <Products></Products>
+            <Inventory></Inventory>
         </div>
     );
 };

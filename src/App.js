@@ -5,10 +5,11 @@ import Login from "./components/pages/login/Login";
 import Footer from "./components/pages/shared/Footer";
 import Register from "./components/pages/login/Register";
 import ErrorPage from "./components/pages/ErrorPage/Errorpage";
-import Inventory from "./components/pages/inventory/Inventory";
+import InventoryDetails from "./components/pages/InventoryDetails/InventoryDetails";
 import RequireAuth from "./components/pages/login/RequireAuth";
 import 'react-toastify/dist/ReactToastify.css';
 import {ToastContainer} from "react-toastify";
+import ManageInventory from "./components/pages/InventoryDetails/ManageInventory";
 
 function App() {
   return (
@@ -20,7 +21,12 @@ function App() {
             <Route path={'/register'} element={<Register/>}></Route>
             <Route path={'/inventory/:id'} element={
                 <RequireAuth>
-                    <Inventory/>
+                    <InventoryDetails/>
+                </RequireAuth>
+            }></Route>
+            <Route path={'/inventory/all'} element={
+                <RequireAuth>
+                    <ManageInventory/>
                 </RequireAuth>
             }></Route>
             <Route path={'*'} element={<ErrorPage/>}></Route>
