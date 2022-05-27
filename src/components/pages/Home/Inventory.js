@@ -5,7 +5,7 @@ const Inventory = () => {
     const [inventories, setInventories] = useState([])
     const navigate = useNavigate()
     useEffect(() => {
-        fetch('http://localhost:5000/inventory?limit=6')
+        fetch('https://safe-woodland-23503.herokuapp.com/inventory?limit=6')
             .then(res => res.json())
             .then(data => setInventories(data))
     })

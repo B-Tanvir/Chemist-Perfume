@@ -22,15 +22,12 @@ const Login = () => {
     }
 
     useEffect(() => {
-        if ((!loading && !loadingG) && (error || errorG)) {
-            if (error) {
-                toast(error.message)
-            }
+        if (!loadingG && errorG) {
             if (errorG) {
                 toast(errorG.message)
             }
         }
-    }, [loading, loadingG])
+    }, [errorG, loadingG])
 
     const handleLogin = e => {
         console.log(password )
@@ -49,17 +46,20 @@ const Login = () => {
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="card-body">
+                        {
+                            error && <p className={'text-red-400'}>{error.message}</p>
+                        }
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input onBlur={(event) => setEmail(event.target.value)} type="text" name={'email'} placeholder="email" className="input input-bordered"/>
+                            <input onBlur={(event) => setEmail(event.target.value)} type="email" name={'email'} placeholder="email" required className="input input-bordered"/>
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input onBlur={(e) => setPassword(e.target.value)} type="password" name={'password'} placeholder="password" className="input input-bordered"/>
+                            <input onBlur={(e) => setPassword(e.target.value)} type="password" name={'password'} placeholder="password" required className="input input-bordered"/>
                             <label className="label">
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
