@@ -41,7 +41,7 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                     <li><a href={'/#InventoryDetails'}>Inventory</a></li>
-                    <li><a>Item 3</a></li>
+                    <li><Link to={'/blogs'}>Blogs</Link></li>
                     <li tabIndex="0">
                         <a>
                             Manage Items
@@ -53,7 +53,6 @@ const Navbar = () => {
                         <ul className="p-3.5 bg-sky-100 text-black">
                             <li className={'hover:bg-pink-200'}><a>My items</a></li>
                             <li className={'hover:bg-pink-200'}><a>Add items</a></li>
-                            <li className={'hover:bg-pink-200'}><a>Submenu 3</a></li>
                         </ul>
                     </li>
                 </ul>
