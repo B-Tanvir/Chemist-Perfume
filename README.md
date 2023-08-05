@@ -19,9 +19,6 @@ A perfume warehouse management website
 **Server:** NodeJS, Express, MongoDB, Firebase
 
 
-## 🔗 Links
-[Live Site](https://chemist-perfume.web.app/)
-
 
 ## License
 
