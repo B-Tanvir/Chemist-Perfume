@@ -4,7 +4,7 @@
 A perfume warehouse management website
 
 
-## Features (Under development - skipped some of the features for time shortage)
+## Features
 
 - Warehouse Management
 - Athentication
